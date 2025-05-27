@@ -1,0 +1,6 @@
+PUT http://localhost:3001/api/timer/6826d1ae4429b9d1da9592f0
+Content-Type: application/json
+
+{
+  "timerSeconds": 5
+}
