@@ -5,9 +5,12 @@ const url = process.env.MONGODB_URI;
 mongoose.set("strictQuery", false);
 mongoose.connect(url);
 
-const timerSchema = new mongoose.Schema({
-  timerSeconds: Number,
-});
+const timerSchema = new mongoose.Schema(
+  {
+    timerSeconds: Number,
+  },
+  { timestamps: true }
+);
 
 timerSchema.set("toJSON", {
   transform: (document, returnedObject) => {
